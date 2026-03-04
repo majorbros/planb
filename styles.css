@@ -581,11 +581,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .annotations li::before {
-  content: '→';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--teal);
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .annotations li strong { color: var(--teal); }
@@ -1065,11 +1066,14 @@ h1, h2, h3, h4, h5 {
 
 .cohort-card .cohort-start {
   font-weight: 400;
-  color: var(--teal);
   font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
+.cohort-card--teal .cohort-start { color: var(--teal); }
+.cohort-card--coral .cohort-start { color: var(--coral); }
+.cohort-card--grey .cohort-start { color: var(--taupe); }
 
 .cohort-card .cohort-start strong {
   font-size: 1.2rem;
@@ -1397,82 +1401,88 @@ h1, h2, h3, h4, h5 {
 
 /* --- Teaser Offer --- */
 .teaser {
+  background: var(--light);
+  color: var(--dark);
+  padding: var(--section-pad) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.teaser__heading {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.teaser__intro {
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.teaser__cards {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teaser__card-deal {
   background: var(--dark);
   color: var(--white);
-  padding: var(--section-pad) 0;
-}
-
-.teaser__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
-.teaser__badge {
-  display: inline-block;
-  background: var(--coral);
-  color: var(--white);
-  font-size: 0.7rem;
+.teaser__card-label {
+  font-family: 'BioRhyme', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.teaser__card-sublabel {
+  font-size: 1rem;
+  color: var(--light);
+  margin-bottom: 0.5rem;
+}
+
+.teaser__card-off {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  margin-bottom: 1rem;
 }
 
-.teaser h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 1rem;
-}
-
-.teaser__body {
-  font-size: 0.95rem;
+.teaser__card-cta {
+  background: var(--dark);
   color: var(--light);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.teaser__card-cta p {
+  font-size: 0.9rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-}
-
-.teaser__price {
-  margin-bottom: 1.5rem;
-}
-
-.teaser__price .old {
-  text-decoration: line-through;
-  color: var(--taupe);
-  font-size: 1.2rem;
-  margin-right: 1rem;
-}
-
-.teaser__price .new {
-  font-family: 'BioRhyme', serif;
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--teal);
-}
-
-.teaser__price .discount {
-  display: inline-block;
-  background: var(--coral);
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  margin-left: 1rem;
-  vertical-align: super;
-}
-
-.teaser__image {
-  border-radius: 8px;
-  border: 2px solid rgba(56, 200, 195, 0.2);
 }
 
 .wave-divider--footer {
   background: var(--light);
   line-height: 0;
-  padding-top: 1rem;
 }
 
 .wave-divider--footer svg {
@@ -1490,9 +1500,8 @@ h1, h2, h3, h4, h5 {
 
 .footer__inner {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -1559,7 +1568,7 @@ h1, h2, h3, h4, h5 {
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
   .phases { grid-template-columns: 1fr 1fr; }
   .different__list { grid-template-columns: 1fr; }
-  .teaser__inner { grid-template-columns: 1fr; }
+  .teaser__cards { grid-template-columns: 1fr; }
   .story__slide { grid-template-columns: 1fr; }
   .story__slide img { height: 200px; }
   .footer__inner { flex-direction: column; }
