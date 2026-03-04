@@ -21,13 +21,7 @@
         <img src="images/logo-nav.png" alt="Plan B">
       </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#problem">The Problem</a></li>
-        <li><a href="#solution">The Solution</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#cohorts" class="btn btn--teal nav__cta">Join a Cohort</a></li>
+        <li><a href="#">Home</a></li>
       </ul>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -37,36 +31,33 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__overlay"></div>
     <div class="hero__content">
       <div class="hero__text">
         <h1>
-          <span>See Your Financial Future.</span>
-          <span class="line2">Improve It.</span>
+          <span class="line1">1. See Your Financial Future.</span>
+          <span class="line2">2. Improve It.</span>
         </h1>
+        <form id="heroForm" class="hero__inline-form" action="#" method="POST">
+          <input type="email" name="email" placeholder="E-mail address" required>
+          <button type="submit" class="btn btn--teal">Next Cohort Alert</button>
+        </form>
+      </div>
+      <div class="hero__right">
+        <img src="images/logo-color.png" alt="Plan B — rethinking retirement" class="hero__logo-large">
         <p class="hero__tagline">
           <strong>Plan B</strong> is a 5-week mentoring program that helps you to
           <strong>retire at least 7 years earlier</strong> by applying the Design Thinking methodology.
         </p>
-        <a href="#cohorts" class="btn btn--teal">View Next Cohorts</a>
-      </div>
-      <div class="hero__form">
-        <h3>Next Cohort Alert</h3>
-        <p>Get notified when the next cohort opens for enrollment.</p>
-        <form id="heroForm" action="#" method="POST">
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Enter your email address" required>
-          </div>
-          <button type="submit" class="btn btn--coral">Notify Me</button>
-          <label class="form-consent">
-            <input type="checkbox" name="consent">
-            I would like to receive news, tips and tricks, and other promotional material
-          </label>
-        </form>
       </div>
     </div>
   </section>
+
+  <!-- ===== TEAL WAVE DIVIDER ===== -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z" fill="#38C8C3"/>
+    </svg>
+  </div>
 
   <!-- ===== FLOURISH CHART 1 ===== -->
   <section class="flourish-section">
@@ -211,7 +202,7 @@
           <li><strong>Enhanced Plan B's</strong> can accumulate over $8 million by age 62 and even $53 million by age 75</li>
         </ul>
         <p class="annotations__cta">Which financial trajectory do you want to be on? Design your own!</p>
-        <a href="#cohorts" class="btn btn--teal">View Next Cohorts</a>
+        <a href="#cohorts" class="btn btn--coral">View Next Cohorts</a>
       </div>
     </div>
   </section>
@@ -423,12 +414,14 @@
   <!-- ===== COHORT SCHEDULE ===== -->
   <section class="cohorts" id="cohorts">
     <div class="container fade-in">
-      <span class="section-label">Upcoming Sessions</span>
-      <h2>Pick Your Cohort</h2>
-      <p class="subtitle">Choose the schedule that works best for you. All cohorts cover the same 5-week program.</p>
+      <h2 style="text-align:center;">Pick Your Cohort</h2>
+      <form class="cohort-optin" action="#" method="POST">
+        <input type="email" placeholder="E-mail address" required>
+        <button type="submit" class="btn btn--teal">Notify Me About Next Cohorts</button>
+      </form>
 
       <div class="cohorts__grid">
-        <div class="cohort-card">
+        <div class="cohort-card cohort-card--teal">
           <h3>Tuesdays</h3>
           <p class="cohort-time">1pm GMT / 2pm CET / 9pm SGT</p>
           <p class="cohort-start">Starts Jan 13th 2026</p>
@@ -443,7 +436,7 @@
           <p class="deadline">Deadline: Jan 10</p>
         </div>
 
-        <div class="cohort-card">
+        <div class="cohort-card cohort-card--coral">
           <h3>Thursdays</h3>
           <p class="cohort-time">10am GMT / 11am CET / 6pm SGT</p>
           <p class="cohort-start">Starts Jan 15th 2026</p>
@@ -458,7 +451,7 @@
           <p class="deadline">Deadline: Jan 12</p>
         </div>
 
-        <div class="cohort-card">
+        <div class="cohort-card cohort-card--grey">
           <h3>Sundays</h3>
           <p class="cohort-time">12 noon GMT / 1pm CET / 8pm SGT</p>
           <p class="cohort-start">Starts Jan 18th 2026</p>
@@ -496,27 +489,33 @@
 
       <div class="pricing__grid">
         <div class="price-card">
-          <img src="images/course-self.png" alt="Self E-Learning">
-          <h3>Self E-Learning Only</h3>
-          <div class="price-card__price"><span class="currency">€</span>500</div>
-          <p>Prefer to skip the mentoring sessions and apply the tools on your own schedule? Get a prorated upgrade to a cohort or concierge later. Go it alone for now!</p>
-          <a href="#" class="btn btn--outline">Get Started</a>
-        </div>
-
-        <div class="price-card price-card--featured">
-          <img src="images/course-standard.png" alt="Standard Small Cohort">
-          <h3>Standard Small Cohort</h3>
-          <div class="price-card__price"><span class="currency">€</span>1,000</div>
-          <p>Our most popular option following various fixed 5-week schedules together with a few other professionals sharing mentoring sessions. Get it done fast!</p>
-          <a href="#" class="btn btn--teal">Join a Cohort</a>
+          <img src="images/course-concierge.png" alt="Personal Concierge 1:1">
+          <h3>Personal Concierge 1:1</h3>
+          <p>Choose this program if you prefer to receive personal 1:1 mentoring sessions spread over 5 or 10 weeks around your own schedule. A bit more flexible!</p>
+          <div class="price-card__bottom">
+            <a href="#" class="btn btn--coral">Enroll</a>
+            <span class="price-card__price">€1,500</span>
+          </div>
         </div>
 
         <div class="price-card">
-          <img src="images/course-concierge.png" alt="Personal Concierge 1:1">
-          <h3>Personal Concierge 1:1</h3>
-          <div class="price-card__price"><span class="currency">€</span>1,500</div>
-          <p>Choose this program if you prefer to receive personal 1:1 mentoring sessions spread over 5 or 10 weeks around your own schedule. A bit more flexible!</p>
-          <a href="#" class="btn btn--outline">Go Concierge</a>
+          <img src="images/course-standard.png" alt="Standard Small Cohort">
+          <h3>Standard Small Cohort</h3>
+          <p>Our most popular option following various fixed 5-week schedules together with a few other professionals sharing mentoring sessions. Get it done fast!</p>
+          <div class="price-card__bottom">
+            <a href="#" class="btn btn--coral">Enroll</a>
+            <span class="price-card__price">€1,000</span>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <img src="images/course-self.png" alt="Self E-Learning Only">
+          <h3>Self E-Learning Only</h3>
+          <p>Prefer to skip the mentoring sessions and apply the tools on your own schedule? Get a prorated upgrade to a cohort or concierge later. Go it alone for now!</p>
+          <div class="price-card__bottom">
+            <a href="#" class="btn btn--coral">Enroll</a>
+            <span class="price-card__price">€500</span>
+          </div>
         </div>
       </div>
     </div>
@@ -637,12 +636,12 @@
 
   <!-- ===== CTA ===== -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container container--narrow">
       <h2>Got More Questions First?</h2>
       <div class="cta-section__buttons">
-        <a href="mailto:janrkennedy@gmail.com" class="btn btn--dark-outline">Email Us</a>
-        <a href="https://calendly.com/janrkennedy/30min" target="_blank" rel="noopener" class="btn btn--dark-outline">Schedule a Zoom Call</a>
-        <a href="#pricing" class="btn btn--teal">Nah, I'm Ready…</a>
+        <a href="mailto:janrkennedy@gmail.com" class="btn btn--cta-outline">Email Us ›</a>
+        <a href="https://calendly.com/janrkennedy/30min" target="_blank" rel="noopener" class="btn btn--cta-outline">Schedule Zoom Call ›</a>
+        <a href="#pricing" class="btn btn--cta-dark">Nah, I'm Ready… ›</a>
       </div>
     </div>
   </section>
