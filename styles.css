@@ -1037,45 +1037,41 @@ h1, h2, h3, h4, h5 {
 }
 
 .cohort-card {
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0;
   box-shadow: 0 2px 20px rgba(38, 33, 32, 0.06);
   text-align: center;
   overflow: hidden;
-  border: 2px solid var(--light);
+  background: var(--white);
+  border: none;
 }
 
 .cohort-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0;
-  padding: 1.2rem;
-  color: var(--white);
+  padding: 1.2rem 1.5rem;
+  color: var(--dark);
 }
 
-.cohort-card--teal h3 { background: var(--teal); color: var(--dark); }
-.cohort-card--coral h3 { background: var(--coral); color: var(--dark); }
-.cohort-card--grey h3 { background: var(--light); color: var(--dark); }
+.cohort-card--teal h3 { background: var(--teal); }
+.cohort-card--coral h3 { background: var(--coral); }
+.cohort-card--grey h3 { background: var(--light); }
 
-.cohort-card .cohort-time,
-.cohort-card .cohort-start,
-.cohort-card table,
-.cohort-card .btn,
-.cohort-card .deadline {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.cohort-card__body {
+  padding: 1.5rem 2rem 2rem;
 }
 
 .cohort-card .cohort-time {
   font-size: 0.8rem;
   color: var(--taupe);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .cohort-card .cohort-start {
   font-weight: 700;
   color: var(--teal);
   font-size: 0.95rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .cohort-card table {
@@ -1086,7 +1082,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .cohort-card td {
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid rgba(38, 33, 32, 0.06);
 }
 
@@ -1097,13 +1093,22 @@ h1, h2, h3, h4, h5 {
 
 .cohort-card td:last-child { text-align: right; }
 
+.cohort-card .btn {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.cohort-card--teal .btn { background: var(--teal); border-color: var(--teal); color: var(--dark); }
+.cohort-card--coral .btn { background: var(--coral); border-color: var(--coral); color: var(--dark); }
+.cohort-card--grey .btn { background: var(--light); border-color: var(--light); color: var(--dark); }
+
 .cohort-card .deadline {
   font-size: 0.75rem;
   color: var(--coral);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 /* --- Pricing --- */
